@@ -754,45 +754,39 @@ background:linear-gradient(
     }
 }
 
-/* PRICING - faithful responsive build of approved visual */
-.pricing-section{--pgold:#c7983d;--pnavy:#082640;position:relative;isolation:isolate;overflow:hidden;padding:34px 5.2% 22px;background:#f7f4ed}
-.pricing-section:before{content:"";position:absolute;z-index:-2;inset:0 0 auto;height:500px;background:linear-gradient(180deg,rgba(224,240,250,.08) 0%,rgba(255,255,255,.03) 58%,#f7f4ed 100%),url("https://images.pexels.com/photos/30906353/pexels-photo-30906353/free-photo-of-aerial-view-of-residential-area-and-skyscrapers.jpeg?auto=compress&dpr=1&w=1920") center 46%/cover no-repeat}
-.pricing-section:after{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;height:500px;background:linear-gradient(180deg,rgba(255,255,255,.58),rgba(255,255,255,.46) 70%,#f7f4ed 100%)}
-.pricing-head{text-align:left;max-width:1500px;margin:0 auto 54px;padding-right:42%}
-.pricing-head .mini{color:#b88428;font-size:15px;font-weight:800;letter-spacing:.27em}
-.pricing-head .mini:before{content:"";display:inline-block;width:68px;height:1px;background:#c99a42;vertical-align:middle;margin:0 16px 0 0}.pricing-head .mini:after{display:none}
-.pricing-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,3.2vw,54px);font-weight:400;letter-spacing:-.035em;color:var(--pnavy);margin:10px 0 4px;line-height:1}
-.pricing-head p{margin:0;color:#18344f;font-size:18px;line-height:1.4}
+/* PRICING - LOCKED APPROVED LAYOUT */
+.pricing-section{--pgold:#c7983d;--pnavy:#082640;position:relative;isolation:isolate;overflow:hidden;padding:42px 5.8% 24px;background:#f8f5ef}
+.pricing-section:before{content:"";position:absolute;z-index:-2;inset:0 0 auto;height:560px;background:url("https://images.pexels.com/photos/30906353/pexels-photo-30906353/free-photo-of-aerial-view-of-residential-area-and-skyscrapers.jpeg?auto=compress&dpr=1&w=1920") center 44%/cover no-repeat}
+.pricing-section:after{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;height:560px;background:linear-gradient(180deg,rgba(255,255,255,.50),rgba(255,255,255,.38) 72%,#f8f5ef 100%)}
+.pricing-head{max-width:1500px;margin:0 auto 34px;text-align:left;padding-right:42%}
+.pricing-head .mini{color:#b88428;font-size:15px;font-weight:700;letter-spacing:.25em}
+.pricing-head .mini:before{content:"";display:inline-block;width:68px;height:1px;background:#c99a42;vertical-align:middle;margin:0 16px 0 0}
+.pricing-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,3.2vw,55px);font-weight:400;letter-spacing:-.025em;color:var(--pnavy);margin:11px 0 5px;line-height:.98}
+.pricing-head p{margin:0;color:#18344f;font-size:18px;line-height:1.35}
 .pricing-grid{max-width:1500px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
-.price-card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.96);border:1px solid rgba(197,155,77,.65);border-radius:7px;overflow:visible;box-shadow:0 9px 26px rgba(7,31,50,.08)}
+.price-card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.97);border:1px solid rgba(197,155,77,.65);border-radius:7px;overflow:visible;box-shadow:0 9px 26px rgba(7,31,50,.08)}
 .price-card.featured{border-color:#c99a42}
-.popular{font-family:Arial,Helvetica,sans-serif;position:absolute;z-index:4;top:-22px;left:50%;transform:translateX(-50%);min-width:240px;text-align:center;background:#dfb75f;color:#fff;padding:12px 24px;font-size:14px;font-weight:800;letter-spacing:.02em;border-radius:2px}
+.popular{font-family:Arial,Helvetica,sans-serif;position:absolute;z-index:4;top:-25px;left:50%;transform:translateX(-50%);min-width:220px;text-align:center;background:#dfb75f;color:#fff;padding:12px 24px;font-size:14px;font-weight:800;border-radius:2px}
 .price-card img{width:100%;height:142px;object-fit:cover;border-radius:6px 6px 0 0}
-.price-title{min-height:68px;background:linear-gradient(90deg,#092842,#061d32);color:#fff;padding:14px 27px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.price-title h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;letter-spacing:0}
+.price-title{min-height:68px;background:linear-gradient(90deg,#092842,#061d32);color:#fff;padding:12px 30px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.price-title h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:29px;font-weight:400;letter-spacing:0;text-transform:none}
 .price{font-family:Georgia,"Times New Roman",serif;font-size:29px;font-weight:700;line-height:.92;text-align:right}
-.price small{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
-.price.gold-price{color:#e2ad45;font-size:16px;line-height:1.18}
-.price-body{padding:18px 38px 21px;flex:1}
+.price small{display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
+.price.gold-price{font-family:Arial,Helvetica,sans-serif;color:#e2ad45;font-size:16px;font-weight:800;line-height:1.18}
+.price-body{padding:20px 38px 23px;flex:1;min-height:258px}
 .price-body>p{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:400;line-height:1.42;color:#0c2943;padding-bottom:15px;border-bottom:1px solid #d7d2c8;margin:0 0 17px}
 .price-list{list-style:none;padding:0;margin:0}
 .price-list li{font-family:Arial,Helvetica,sans-serif;position:relative;padding:0 0 8px 38px;color:#102d48;font-size:14px;line-height:1.32}
 .price-list li:before{content:"✓";position:absolute;left:0;top:-2px;width:21px;height:21px;border-radius:50%;background:#bf8d34;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
 .pricing-benefits{max-width:1500px;margin:22px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #ddd8ce;padding:0 0 17px}
 .pricing-benefit{position:relative;min-height:58px;padding:5px 22px 3px 65px;border-right:1px solid #d6d0c6;display:flex;flex-direction:column;justify-content:center;text-align:left}
-.pricing-benefit:last-child{border-right:0}
-.pricing-benefit:before{position:absolute;left:18px;top:9px;color:#b7832d;font-size:34px;line-height:1}
-.pricing-benefit:nth-child(1):before{content:"♢"}
-.pricing-benefit:nth-child(2):before{content:"▣"}
-.pricing-benefit:nth-child(3):before{content:"▤"}
-.pricing-benefit:nth-child(4):before{content:"⌂"}
-.pricing-benefit strong{display:block;font-size:13px;font-weight:800;color:#092842;margin-bottom:3px}
-.pricing-benefit span{font-size:12px;color:#68798b}
+.pricing-benefit:last-child{border-right:0}.pricing-benefit:before{position:absolute;left:18px;top:9px;color:#b7832d;font-size:34px;line-height:1}
+.pricing-benefit:nth-child(1):before{content:"♢"}.pricing-benefit:nth-child(2):before{content:"▣"}.pricing-benefit:nth-child(3):before{content:"▤"}.pricing-benefit:nth-child(4):before{content:"⌂"}
+.pricing-benefit strong{display:block;font-size:13px;font-weight:800;color:#092842;margin-bottom:3px}.pricing-benefit span{font-size:12px;color:#68798b}
 .pricing-note{max-width:1500px;margin:14px auto 0;position:relative;text-align:center;color:#68798b;font-size:11px;line-height:1.5;padding:0 315px 0 150px;min-height:58px}
-.pricing-note strong{display:block;color:#17324c;font-size:12px;margin-bottom:2px}
-.pricing-cta{position:absolute;right:0;top:0;width:285px;background:linear-gradient(90deg,#ddb45d,#e7c476);color:#092842;padding:16px 18px;font-weight:800;font-size:13px;border-radius:4px;text-align:center}
-@media(max-width:1100px){.pricing-section{padding-left:4%;padding-right:4%}.pricing-head{margin-bottom:70px;padding-right:0}.pricing-grid{grid-template-columns:1fr;gap:26px}.price-card{max-width:760px;width:100%;margin:auto}.price-card img{height:240px}.pricing-benefits{grid-template-columns:1fr 1fr;gap:0}.pricing-benefit{margin-bottom:16px}.pricing-benefit:nth-child(2){border-right:0}.pricing-note{padding:0 0 68px}.pricing-cta{top:auto;bottom:0;left:50%;right:auto;transform:translateX(-50%)}}
-@media(max-width:620px){.pricing-section{padding:38px 4% 24px}.pricing-head{text-align:left;padding-right:0}.pricing-section:before,.pricing-section:after{height:430px}.pricing-head{margin-bottom:58px}.pricing-head .mini{font-size:11px}.pricing-head .mini:before,.pricing-head .mini:after{width:32px;margin:0 8px}.pricing-head h2{font-size:34px}.pricing-head p{font-size:14px}.price-card img{height:180px}.price-title{min-height:64px;padding:13px 18px}.price-title h3{font-size:19px}.price{font-size:24px}.price.gold-price{font-size:13px}.price-body{padding:20px 22px 24px}.pricing-benefits{grid-template-columns:1fr}.pricing-benefit{border-right:0;border-bottom:1px solid #ddd8ce;padding-left:62px}.pricing-benefit:last-child{border-bottom:0}.pricing-note{padding-bottom:72px}.pricing-cta{width:min(285px,100%)}}
+.pricing-note strong{display:block;color:#17324c;font-size:12px;margin-bottom:2px}.pricing-cta{position:absolute;right:0;top:0;width:285px;background:linear-gradient(90deg,#ddb45d,#e7c476);color:#092842;padding:16px 18px;font-weight:800;font-size:13px;border-radius:4px;text-align:center}
+@media(max-width:1100px){.pricing-section{padding-left:4%;padding-right:4%}.pricing-head{padding-right:0;margin-bottom:60px}.pricing-grid{grid-template-columns:1fr;gap:28px}.price-card{max-width:760px;width:100%;margin:auto}.price-card img{height:220px}.price-body{min-height:0}.pricing-benefits{grid-template-columns:1fr 1fr}.pricing-benefit:nth-child(2){border-right:0}.pricing-note{padding:0 0 68px}.pricing-cta{top:auto;bottom:0;left:50%;right:auto;transform:translateX(-50%)}}
+@media(max-width:620px){.pricing-section{padding:38px 4% 24px}.pricing-section:before,.pricing-section:after{height:460px}.pricing-head{padding-right:0;margin-bottom:56px}.pricing-head .mini{font-size:11px}.pricing-head .mini:before{width:32px;margin-right:8px}.pricing-head h2{font-size:35px}.pricing-head p{font-size:14px}.price-card img{height:180px}.price-title{min-height:64px;padding:12px 18px}.price-title h3{font-size:24px}.price{font-size:24px}.price.gold-price{font-size:13px}.price-body{padding:20px 22px 24px}.pricing-benefits{grid-template-columns:1fr}.pricing-benefit{border-right:0;border-bottom:1px solid #ddd8ce}.pricing-benefit:last-child{border-bottom:0}.pricing-note{padding-bottom:72px}.pricing-cta{width:min(285px,100%)}}
 </style>
 </head>
 <body>
@@ -1021,7 +1015,7 @@ background:linear-gradient(
   <div class="pricing-grid">
     <article class="price-card">
       <img src="images/roof-surveys.png" alt="Basic drone roof survey in London">
-      <div class="price-title"><h3>BASIC</h3><div class="price"><small>FROM</small>£195</div></div>
+      <div class="price-title"><h3>Basic</h3><div class="price"><small>FROM</small>£195</div></div>
       <div class="price-body"><p>Ideal for a straightforward roof or property inspection.</p>
         <ul class="price-list"><li>High-resolution aerial photography</li><li>Visual inspection of requested areas</li><li>Key defect imagery</li><li>Digital image delivery</li></ul>
       </div>
@@ -1029,14 +1023,14 @@ background:linear-gradient(
     <article class="price-card featured">
       <div class="popular">MOST POPULAR</div>
       <img src="images/building-surveys.png" alt="Standard drone building survey in London">
-      <div class="price-title"><h3>STANDARD</h3><div class="price"><small>FROM</small>£295</div></div>
+      <div class="price-title"><h3>Standard</h3><div class="price"><small>FROM</small>£295</div></div>
       <div class="price-body"><p>A more complete condition survey.</p>
         <ul class="price-list"><li>Everything in Basic</li><li>Detailed inspection of key areas</li><li>Annotated defect imagery</li><li>Written findings and condition observations</li><li>Professional PDF survey report</li></ul>
       </div>
     </article>
     <article class="price-card">
       <img src="https://images.pexels.com/photos/37704251/pexels-photo-37704251/free-photo-of-professional-roofer-working-safely-on-a-building-roof.jpeg?auto=compress&dpr=1&w=1260" alt="Roofer carrying out remedial roof repairs">
-      <div class="price-title"><h3>SURVEY &amp; REMEDY</h3><div class="price gold-price">SURVEY<br>INCLUDED*</div></div>
+      <div class="price-title"><h3>Survey &amp; Remedy</h3><div class="price gold-price">SURVEY<br>INCLUDED*</div></div>
       <div class="price-body"><p>Identify the problem and get a route to repair.</p>
         <ul class="price-list"><li>Full drone inspection</li><li>Detailed report with expert observations</li><li>Practical remedial recommendations</li><li>Quotation for identified works</li><li>Survey cost credited back if remedial works are instructed through us</li></ul>
       </div>
