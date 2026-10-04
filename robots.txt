@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dronesurveyslondon.co.uk/sitemap.xml

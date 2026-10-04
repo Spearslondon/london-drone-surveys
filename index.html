@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London Drone Surveys | Roof & Building Surveys</title>
+<meta name="description" content="Professional drone roof, building and site surveys across London. High-resolution imagery, clear reporting and practical recommendations.">
+<style>
+:root{--navy:#071f32;--navy2:#0b2c46;--gold:#f4ad25;--ink:#10213b;--muted:#66748b;--line:#dfe5ea;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.wrap{width:min(1220px,92%);margin:auto}
+header{position:absolute;z-index:20;left:0;right:0;top:0;color:#fff;padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{font-weight:750;letter-spacing:.18em;line-height:1;font-size:28px;position:relative;top:40px;left:-150px;}.logo span{display:block;color:var(--gold);font-size:32px;letter-spacing:.38em;margin-top:7px}.links{display:flex;align-items:center;gap:28px;font-size:20px;font-weight:400;}.quote-btn{background:var(--gold);color:#071f32;padding:14px 22px;font-weight:800}
+.hero{min-height:760px;position:98%;display:flex;align-items:center;color:#fff;background-image:linear-gradient(90deg,rgba(4,20,33,.84),rgba(4,20,33,.45) 43%,rgba(4,20,33,.05) 74%),url("images/hero-london.png");background-size:cover;background-position:center;background-repeat:no-repeat}.hero .wrap{width:98%;max-width:1500px}.hero-content{padding-top:10px}.eyebrow,.mini{font-size:17px;font-weight:600;letter-spacing:.2em}.hero h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}.hero h1{font-size:clamp(54px,5vw,62px);line-height:.98;margin:14px 0 20px;max-width:790px}.gold{color:var(--gold)}.hero p{font-size:18px;line-height:1.55;max-width:590px}.outline{display:inline-block;border:1px solid #fff;padding:15px 23px;margin-top:10px;font-weight:700}.hero-side{position:absolute;right:5%;bottom:110px;font-size:12px;letter-spacing:.12em;line-height:1.7;font-weight:800}
+
+section{padding:20px 0}.mini{color:#65758b}.mini:before{content:"";width:28px;height:3px;background:var(--gold);display:inline-block;vertical-align:middle;margin-right:13px}.heading-row{display:flex;justify-content:space-between;gap:30px;align-items:end}h2{font-size:46px;line-height:1.05;margin:12px 0}.muted{color:var(--muted);line-height:1.55}
+#services .wrap{
+    width:100%;
+    max-width:none;
+    padding:70px 30px 40px;
+}.services{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:24px;
+    margin-top:45px;
+    width:100%;
+}.card{border:2px solid var(--line);background:#fff}.card img{height:230px;width:100%;object-fit:cover;display: block;}.card-body{padding:24px}.card h3{font-size:17px;margin:0 0 8px}.card p{font-size:15px;line-height:1.45;color:var(--muted);margin:0 0 10px}.arrow{color:var(--gold);font-size:23px}
+.credentials{width:100vw;margin-left:calc(50% - 50vw);margin-top:70px;display:grid;grid-template-columns:repeat(5,1fr);padding:0 40px;}display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:30px}.credentials div{text-align:center;padding:22px 12px;border-right:1px solid var(--line);font-size:13px}.credentials div:last-child{border-right:0}.credentials b{display:block;font-size:22px;margin-bottom:7px}.credential{
+    text-align:center;
+    padding:28px 15px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.credential svg{
+    width:38px;
+    height:38px;
+    display:block;
+    margin:0 auto 14px;
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.credential span{
+    display:block;
+}
+.insights{padding:0;background:#f4f7f9}.insight-grid{display:grid;grid-template-columns:1fr 1.05fr;min-height:520px}.roof-image{position:relative;background:url("images/roof-defect-survey.png") center/cover no-repeat}.defect{position:absolute;right:30px;top:45px;background:#fff;width:190px;padding:8px;box-shadow:0 8px 30px #0003}.defect img{height:110px;width:100%;object-fit:cover}.defect small{display:block;padding:8px 3px 3px}.insight-copy{padding:70px 7vw 60px 55px}.checks{columns:2;list-style:none;padding:0;margin:25px 0}.checks li{break-inside:avoid;margin-bottom:15px;color:#586982}.checks li:before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;margin-right:9px}.goldbtn{display:inline-block;background:var(--gold);padding:15px 24px;font-weight:800}
+.process{padding:58px 0}.steps{display:grid;grid-template-columns:1.15fr repeat(4,1fr);gap:20px;align-items:center}.process h2{font-size:39px}.step{display:grid;grid-template-columns:48px 1fr;gap:12px}.number{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:22px}.step h3{font-size:14px;margin:4px 0}.step p{font-size:12px;color:var(--muted);line-height:1.4;margin:0}
+.reports-feedback{display:grid;grid-template-columns:1.15fr 1fr;padding:0}.reports{background:var(--navy);color:#fff;padding:60px max(4vw,30px)}.reports h2{font-size:42px}.report-img{width:100%;height:275px;object-fit:contain;margin:12px 0}.feedback{padding:60px max(5vw,30px);background:#fbfcfd}.testimonial{font-family:Georgia,serif;font-style:italic;font-size:22px;line-height:1.55}.stars{color:var(--gold);font-size:25px;letter-spacing:3px}
+.contact{background:#fff}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:30px}
+footer{background:#061c2e;color:#fff;padding:42px 0 26px}.footer-main{display:grid;grid-template-columns:1.2fr 2fr .8fr;gap:35px;align-items:center}.footer-links{display:flex;justify-content:center;gap:20px;font-size:12px}.tag{text-align:right;font-size:11px;letter-spacing:.18em}.legal{border-top:1px solid #ffffff24;margin-top:30px;padding-top:20px;color:#aab6c0;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+/* TRUSTED ACROSS MULTIPLE SECTORS */
+
+.sectors-section{
+    background:#071f32;
+    color:#fff;
+    padding:55px 4%;
+}
+
+.sectors-inner{
+    width:100%;
+    max-width:1600px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr repeat(6,1fr);
+    align-items:center;
+}
+
+.sectors-title{
+    padding-right:35px;
+}
+
+.sectors-title .mini{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.22em;
+    margin-bottom:12px;
+}
+
+.sectors-title .mini:before{
+    content:"";
+    display:inline-block;
+    width:30px;
+    height:2px;
+    background:var(--gold);
+    margin-right:14px;
+    vertical-align:middle;
+}
+
+.sectors-title h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:32px;
+    line-height:1.08;
+    font-weight:400;
+    margin:0;
+}
+
+.sector-item{
+    text-align:center;
+    padding:10px 22px;
+    min-height:130px;
+    border-left:1px solid rgba(255,255,255,.25);
+}
+
+.sector-item svg{
+    width:34px;
+    height:34px;
+    margin:0 auto 12px;
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.sector-item h3{
+    font-size:15px;
+    margin:0 0 8px;
+    color:#fff;
+}
+
+.sector-item p{
+    font-size:12px;
+    line-height:1.45;
+    margin:0 auto;
+    color:rgba(255,255,255,.78);
+    max-width:150px;
+}
+@media(max-width:1000px){.services{grid-template-columns:repeat(3,1fr)}.credentials{grid-template-columns:repeat(3,1fr)}.insight-grid{grid-template-columns:1fr}.roof-image{min-height:480px}.steps{grid-template-columns:1fr 1fr}.steps>div:first-child{grid-column:1/-1}.reports-feedback{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr;text-align:center}.footer-links{flex-wrap:wrap}.tag{text-align:center}.hero-side{display:none}}
+@media(max-width:680px){.links{display:none}.hero{min-height:650px;background-position:62% center}.hero h1{font-size:48px}.services{grid-template-columns:1fr 1fr}.credentials{grid-template-columns:1fr 1fr}.heading-row,.contact-row{display:block}.insight-copy{padding:55px 6%}.checks{columns:1}.steps{grid-template-columns:1fr}.steps>div:first-child{grid-column:auto}.legal{flex-direction:column}.card img{height:180px}}
+/* HERO INTO SECTORS FADE */
+
+.hero{
+    position:relative;
+    margin-bottom:0;
+}
+
+
+.hero .hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.sectors-section{
+    position:relative;
+    z-index:3;
+    color:#fff;
+    margin-top:-190px;
+      padding:35px 4% 45px;
+    background:transparent !important;
+}
+background:linear-gradient(
+    to bottom,
+    rgba(7,31,50,.08) 0%,
+    rgba(7,31,50,.18) 25%,
+    rgba(7,31,50,.35) 50%,
+    rgba(7,31,50,.60) 75%,
+    rgba(7,31,50,.88) 100%
+);
+/* FULL WIDTH SIMPLE PROCESS */
+#process{
+    width:100%;
+    padding:45px 0 50px;
+}
+
+#process .wrap{
+    width:100%;
+    max-width:none;
+    margin:0;
+}
+
+#process .mini,
+#process h2{
+    text-align:center;
+}
+
+#process h2{
+    margin:12px 0 40px;
+}
+
+#process .steps{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    margin:0;
+    padding:0 40px;
+}
+
+#process .step{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+#process .number{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    margin:0 auto 14px;
+}
+
+#process .step h3{
+    margin:0 0 7px;
+    font-size:15px;
+    font-weight:600;
+}
+
+#process .step p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.45;
+}
+/* CLIENT TRUST STRIP */
+.barratt-logo{
+    transform:scale(1.4);
+}
+
+.city-logo{
+    transform:scale(1.4);
+}
+
+.client-trust{
+    width:100%;
+    background:#f7f8f9;
+    border-top:1px solid #e1e5e8;
+    border-bottom:1px solid #e1e5e8;
+    padding:22px 40px;
+}
+
+.client-trust-inner{
+    width:100%;
+    max-width:none;
+    margin:0;
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    align-items:center;
+}
+
+.client-logos{
+    padding-right:40px;
+}
+
+.trust-heading{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.15em;
+    color:#53647a;
+    margin-bottom:17px;
+}
+
+.trust-heading span{
+    display:inline-block;
+    width:30px;
+    height:2px;
+    background:var(--gold);
+    margin-right:14px;
+    vertical-align:middle;
+}
+
+.logos-row{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    align-items:center;
+    gap:35px;
+}
+
+.logos-row img{
+    width:100%;
+    max-width:125px;
+    max-height:48px;
+    object-fit:contain;
+    filter:grayscale(100%);
+}
+
+.trust-testimonial{
+    border-left:1px solid #d5dce2;
+    padding-left:40px;
+}
+
+.trust-testimonial p{
+    margin:0 0 12px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:15px;
+    font-style:italic;
+    line-height:1.4;
+    color:var(--navy);
+}
+
+.trust-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    font-size:10px;
+    color:#53647a;
+}
+
+.trust-bottom strong{
+    color:var(--gold);
+    font-size:17px;
+    letter-spacing:2px;
+}
+/* WHY CHOOSE US */
+
+.why-choose-us{
+    width:100%;
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:240px;
+    background:#071f32;
+}
+
+.why-content{
+    background:#071f32;
+    color:#fff;
+    padding:60px 7%;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:55px;
+    align-items:center;
+}
+
+.why-intro .mini{
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.18em;
+    margin-bottom:16px;
+}
+
+.why-intro .mini::before{
+    content:"";
+    display:inline-block;
+    width:32px;
+    height:2px;
+    background:var(--gold);
+    margin-right:16px;
+    vertical-align:middle;
+}
+
+.why-intro h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(34px,3vw,52px);
+    line-height:1.08;
+    font-weight:400;
+    margin:0 0 20px;
+    color:#fff;
+}
+
+.why-intro p{
+    font-size:15px;
+    line-height:1.65;
+    max-width:500px;
+    margin:0 0 26px;
+    color:rgba(255,255,255,.88);
+}
+
+.why-button{
+    display:inline-block;
+    background:var(--gold);
+    color:#071f32;
+    padding:16px 25px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.why-benefits{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+}
+
+.why-benefit{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:14px;
+    align-items:center;
+}
+
+.why-icon{
+    width:42px;
+    height:42px;
+    border:2px solid var(--gold);
+    color:var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+}
+
+.why-benefit strong{
+    display:block;
+    color:#fff;
+    font-size:14px;
+    margin-bottom:4px;
+}
+
+.why-benefit span{
+    display:block;
+    color:rgba(255,255,255,.78);
+    font-size:13px;
+    line-height:1.35;
+}
+
+.why-image{
+    min-width:0;
+    overflow:hidden;
+}
+
+.why-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .why-choose-us{
+        grid-template-columns:1fr;
+    }
+
+    .why-content{
+        grid-template-columns:1fr;
+        padding:55px 7%;
+    }
+
+    .why-image{
+        min-height:400px;
+    }
+}
+/* SMARTER INSIGHTS SECTION */
+
+.insights{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#f3f5f6;
+    min-height:420px;
+}
+
+.insights-image{
+    position:relative;
+    overflow:hidden;
+    min-height:420px;
+}
+
+.insights-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    transform:scale(.82
+    );
+}
+
+.insights-content{
+    padding:55px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.insights-content .mini{
+    color:#52677c;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.18em;
+    margin-bottom:16px;
+}
+
+.insights-content .mini::before{
+    content:"";
+    display:inline-block;
+    width:30px;
+    height:2px;
+    background:var(--gold);
+    margin-right:14px;
+    vertical-align:middle;
+}
+
+.insights-content h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:44px;
+    line-height:1.05;
+    font-weight:400;
+    color:#071f32;
+    margin:0 0 18px;
+}
+
+.insights-content > p{
+    max-width:600px;
+    font-size:15px;
+    line-height:1.6;
+    color:#52606c;
+    margin:0 0 24px;
+}
+
+.insight-points{
+    display:grid;
+    gap:14px;
+    margin-bottom:26px;
+}
+
+.insight-points strong{
+    display:block;
+    color:#071f32;
+    font-size:15px;
+    margin-bottom:3px;
+}
+
+.insight-points span{
+    display:block;
+    color:#65717c;
+    font-size:13px;
+    line-height:1.45;
+}
+
+@media(max-width:900px){
+    .insights{
+        grid-template-columns:1fr;
+    }
+
+    .insights-image{
+        min-height:320px;
+    }
+
+    .insights-content{
+        padding:45px 7%;
+    }
+
+    .insights-content h2{
+        font-size:36px;
+    }
+}
+/* 25 YEARS CONSTRUCTION EXPERTISE */
+
+.expertise-section{
+    width:100%;
+    display:grid;
+    grid-template-columns:58% 42%;
+    background:#071f32;
+    color:#fff;
+    overflow:hidden;
+}
+
+.expertise-content{
+    padding:52px 5%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.expertise-kicker{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.expertise-kicker span{
+    width:34px;
+    height:2px;
+    background:var(--gold);
+}
+
+.expertise-content h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(34px,3vw,50px);
+    line-height:1.04;
+    font-weight:400;
+    color:#fff;
+    margin:0 0 18px;
+}
+
+.expertise-content h2 em{
+    display:block;
+    color:var(--gold);
+    font-style:normal;
+}
+
+.expertise-intro{
+    max-width:850px;
+    color:rgba(255,255,255,.82);
+    font-size:14px;
+    line-height:1.6;
+    margin:0 0 30px;
+}
+
+.expertise-features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:5px;
+}
+
+.expertise-feature{
+    padding:0 22px;
+    border-right:1px solid rgba(255,255,255,.20);
+}
+
+.expertise-feature:first-child{
+    padding-left:0;
+}
+
+.expertise-feature:last-child{
+    border-right:none;
+    padding-right:0;
+}
+
+.expertise-icon{
+    width:42px;
+    height:42px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-size:19px;
+    margin-bottom:13px;
+}
+
+.expertise-feature h3{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    font-weight:400;
+    color:#fff;
+    margin:0 0 8px;
+}
+
+.expertise-feature p{
+    font-size:12px;
+    line-height:1.45;
+    color:rgba(255,255,255,.70);
+    margin:0;
+}
+
+.expertise-footer{
+    margin-top:30px;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.25);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.expertise-statement strong{
+    display:block;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:20px;
+    font-weight:400;
+    color:#fff;
+}
+
+.expertise-statement span{
+    display:block;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:19px;
+    color:var(--gold);
+    margin-top:3px;
+}
+
+.expertise-cta{
+    flex-shrink:0;
+    display:inline-block;
+    background:var(--gold);
+    color:#071f32;
+    padding:15px 23px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+}
+
+.expertise-visual{
+    min-width:0;
+    overflow:hidden;
+}
+
+.expertise-visual img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .expertise-section{
+        grid-template-columns:1fr;
+    }
+
+    .expertise-visual{
+        height:400px;
+    }
+
+    .expertise-features{
+        grid-template-columns:1fr 1fr;
+        gap:28px;
+    }
+
+    .expertise-feature{
+        padding:0;
+        border-right:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .expertise-content{
+        padding:45px 7%;
+    }
+
+    .expertise-features{
+        grid-template-columns:1fr;
+    }
+
+    .expertise-footer{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .expertise-content h2{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="logo">LONDON DRONE<span>SURVEYS</span></div><nav class="links">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reports">Sample Reports</a>
+    <a href="#contact">Contact</a>
+    </nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap hero-content"><div class="eyebrow">PROFESSIONAL DRONE SURVEYS IN LONDON & SURROUNDING AREAS</div><h1>A Higher<br>Perspective<br><span class="gold">for a Safer Tomorrow</span></h1><p>Accurate data. Clear insights. Safer buildings.<br>We help you inspect, assess and maintain your property or site using professional drone technology.</p></div><div class="hero-side">INSPECT<br>ASSESS<br>PLAN<br>MAINTAIN</div>
+</section>
+  </div>
+  <!-- TRUSTED ACROSS MULTIPLE SECTORS -->
+<section class="sectors-section" id="our-sectors">
+
+  <div class="sectors-inner">
+
+    <div class="sectors-title">
+      <div class="mini">OUR SECTORS</div>
+      <h2>Trusted Across<br>Multiple Sectors</h2>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <path d="M3 11l9-7 9 7"/>
+        <path d="M5 10v10h14V10"/>
+        <path d="M9 20v-6h6v6"/>
+      </svg>
+      <h3>Residential</h3>
+      <p>Homeowners, landlords and private clients.</p>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <rect x="5" y="3" width="14" height="18"/>
+        <path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/>
+      </svg>
+      <h3>Commercial</h3>
+      <p>Offices, retail, industrial and mixed-use properties.</p>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 20h16"/>
+        <path d="M6 20v-8h12v8"/>
+        <path d="M8 12V8h8v4"/>
+        <path d="M9 8V5h6v3"/>
+      </svg>
+      <h3>Construction</h3>
+      <p>Site progress, planning and inspections.</p>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 20h16"/>
+        <path d="M6 18V9l6-5 6 5v9"/>
+        <path d="M9 18v-5h6v5"/>
+      </svg>
+      <h3>Heritage</h3>
+      <p>Listed buildings and conservation projects.</p>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+        <path d="M9 3v15M15 6v15"/>
+      </svg>
+      <h3>Land &amp; Development</h3>
+      <p>Site surveys, development and land mapping.</p>
+    </div>
+
+    <div class="sector-item">
+      <svg viewBox="0 0 24 24">
+        <path d="M3 20h18"/>
+        <path d="M5 9h14"/>
+        <path d="M4 9l8-5 8 5"/>
+        <path d="M7 9v8M11 9v8M15 9v8M19 9v8"/>
+      </svg>
+      <h3>Public Sector</h3>
+      <p>Schools, councils and infrastructure.</p>
+    </div>
+
+  </div>
+
+</section>
+<section id="services"><div class="wrap"><div class="heading-row"><div><div class="mini">OUR SERVICES</div><h2>Drone Survey Solutions</h2><div class="muted">Detailed inspections. Actionable insights. Real value.</div></div><a href="#services">View All Services <span class="arrow">→</span></a></div>
+<div class="services">
+<article class="card"><img src="images/roof-surveys.png" alt="Drone roof survey"><div class="card-body"><h3>Roof Surveys</h3><p>Identify visible issues early and support informed repair decisions.</p><span class="arrow">→</span></div></article>
+<article class="card"><img src="images/building-surveys.png" alt="Building survey"><div class="card-body"><h3>Building Surveys</h3><p>Detailed aerial inspections for residential and commercial properties.</p><span class="arrow">→</span></div></article>
+<article class="card"><img src="images/construction-monitoring.png" alt="Construction monitoring"><div class="card-body"><h3>Construction Monitoring</h3><p>Track progress and create a clear visual record of your project.</p><span class="arrow">→</span></div></article>
+<article class="card"><img src="images/heritage-buildings.png" alt="Heritage building inspection"><div class="card-body"><h3>Heritage & Listed Buildings</h3><p>Sensitive visual inspections with minimal disruption.</p><span class="arrow">→</span></div></article>
+<article class="card"><img src="images/land-site-surveys.png" alt="Land and site survey"><div class="card-body"><h3>Land & Site Surveys</h3><p>High-level visual data for planning, development and site records.</p><span class="arrow">→</span></div></article>
+</div>
+<div class="credentials" id="sectors">
+
+  <div class="credential">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6l7-3z"/>
+      <path d="M9 12l2 2 4-5"/>
+    </svg>
+    <span>CAA Registered Operator</span>
+  </div>
+
+  <div class="credential">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6l7-3z"/>
+      <path d="M8 12h8M12 8v8"/>
+    </svg>
+    <span>Fully Insured</span>
+  </div>
+
+  <div class="credential">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 21s6-5.5 6-11a6 6 0 10-12 0c0 5.5 6 11 6 11z"/>
+      <circle cx="12" cy="10" r="2"/>
+    </svg>
+    <span>London &amp; Surrounding Areas</span>
+  </div>
+
+  <div class="credential">
+    <svg viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="13" rx="2"/>
+      <circle cx="12" cy="12.5" r="4"/>
+      <path d="M8 6l1.5-2h5L16 6"/>
+    </svg>
+    <span>High-Resolution Imagery &amp; Data</span>
+  </div>
+
+  <div class="credential">
+    <svg viewBox="0 0 24 24">
+      <path d="M20 4C12 4 6 7 5 14c4-3 8-4 12-4"/>
+      <path d="M5 14c0 3 2 5 5 6"/>
+    </svg>
+    <span>Lower-Impact Access</span>
+  </div>
+
+</div>
+</div></section>
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us" id="about">
+
+    <div class="why-content">
+
+        <div class="why-intro">
+            <div class="mini">WHY CHOOSE US</div>
+
+            <h2>Trusted Drone Survey<br>Specialists in London</h2>
+
+            <p>
+                We combine advanced drone technology with industry expertise
+                to deliver clear, accurate and actionable insights.
+            </p>
+
+            <a href="#contact" class="why-button">
+                Find Out More →
+            </a>
+        </div>
+
+        <div class="why-benefits">
+
+            <div class="why-benefit">
+                <div class="why-icon">✓</div>
+                <div>
+                    <strong>CAA Registered</strong>
+                    <span>&amp; Fully Insured</span>
+                </div>
+            </div>
+
+            <div class="why-benefit">
+                <div class="why-icon">◎</div>
+                <div>
+                    <strong>High-Resolution</strong>
+                    <span>Imagery &amp; Data</span>
+                </div>
+            </div>
+
+            <div class="why-benefit">
+                <div class="why-icon">◷</div>
+                <div>
+                    <strong>Fast Turnaround</strong>
+                    <span>Clear Professional Reports</span>
+                </div>
+            </div>
+
+            <div class="why-benefit">
+                <div class="why-icon">⌖</div>
+                <div>
+                    <strong>Covering London</strong>
+                    <span>&amp; Surrounding Areas</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="why-image">
+        <img src="images/drone-operator-london.png"
+             alt="London Drone Surveys operator carrying out a professional drone inspection in London">
+    </div>
+
+</section>
+
+<section class="process" id="process"><div class="wrap"><div><div class="mini">HOW IT WORKS</div>
+<h2>A Simple Process</h2>
+</div>
+
+<div class="steps"><div class="step"><div class="number">1</div><div><h3>Get in Touch</h3><p>Tell us your requirements.</p></div></div><div class="step"><div class="number">2</div><div><h3>We Plan</h3><p>We assess and plan the survey.</p></div></div><div class="step"><div class="number">3</div><div><h3>We Fly</h3><p>We carry out the aerial inspection.</p></div></div><div class="step"><div class="number">4</div><div><h3>You Receive Results</h3><p>Clear imagery and reporting.</p></div></div></div></section>
+<!-- SMARTER INSIGHTS -->
+<section class="insights">
+
+    <div class="insights-image">
+        <img src="images/roof-defect-survey.png"
+             alt="Drone roof inspection identifying defects on a London property">
+    </div>
+
+    <div class="insights-content">
+
+        <div class="mini">SMARTER PROPERTY INSPECTIONS</div>
+
+        <h2>Smarter Insights.<br>Greater Protection.</h2>
+
+        <p>
+            Drone surveys provide a fast and effective way to assess
+            difficult-to-access areas without the immediate need for
+            scaffolding or specialist access equipment.
+        </p>
+
+        <div class="insight-points">
+
+            <div>
+                <strong>Identify Defects</strong>
+                <span>Clear aerial imagery helps identify visible defects and areas of concern.</span>
+            </div>
+
+            <div>
+                <strong>Reduce Access Costs</strong>
+                <span>Understand the condition of your property before committing to costly access.</span>
+            </div>
+
+            <div>
+                <strong>Plan Remedial Works</strong>
+                <span>Use clear survey information to make informed maintenance and repair decisions.</span>
+            </div>
+
+        </div>
+
+        <a href="#contact" class="why-button">Book a Survey →</a>
+
+    </div>
+
+</section>
+<!-- 25 YEARS CONSTRUCTION EXPERTISE -->
+<section class="expertise-section">
+
+    <div class="expertise-content">
+
+        <div class="expertise-kicker">
+            <span></span>
+            MORE THAN A DRONE SURVEY
+        </div>
+
+        <h2>
+            25 Years of Construction Expertise.
+            <em>Behind Every Survey.</em>
+        </h2>
+
+        <p class="expertise-intro">
+            Our surveys go beyond aerial imagery. Drawing on over 25 years of
+            construction and property expertise, we assess visible defects from
+            a practical building perspective — helping clients understand the
+            issue, its significance and the appropriate next steps.
+        </p>
+
+        <div class="expertise-features">
+
+            <div class="expertise-feature">
+                <div class="expertise-icon">▤</div>
+                <h3>Conclusive Reports</h3>
+                <p>Clear, structured reporting highlighting visible defects, areas of concern and priorities.</p>
+            </div>
+
+            <div class="expertise-feature">
+                <div class="expertise-icon">✓</div>
+                <h3>Expert Advice</h3>
+                <p>Practical guidance informed by real construction, maintenance and refurbishment experience.</p>
+            </div>
+
+            <div class="expertise-feature">
+                <div class="expertise-icon">◆</div>
+                <h3>Comprehensive Solutions</h3>
+                <p>From identifying the problem to recommending appropriate remedial works and further investigation.</p>
+            </div>
+
+            <div class="expertise-feature">
+                <div class="expertise-icon">◎</div>
+                <h3>From Survey to Solution</h3>
+                <p>Where remedial works are needed, our construction expertise provides a clear route from inspection through to repair.</p>
+            </div>
+
+        </div>
+
+        <div class="expertise-footer">
+
+            <div class="expertise-statement">
+                <strong>We don't just show you what the drone sees.</strong>
+                <span>We help you understand what to do about it.</span>
+            </div>
+
+            <a href="#contact" class="expertise-cta">
+                Discuss Your Survey →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="expertise-visual">
+        <img src="images/construction-expertise-survey.png"
+             alt="Aerial roof survey showing identified defects, detailed analysis and survey recommendations">
+    </div>
+
+</section>
+<section class="client-trust">
+    <div class="client-trust-inner">
+
+        <div class="client-logos">
+
+            <div class="trust-heading">
+                <span></span>
+                TRUSTED BY CLIENTS ACROSS LONDON
+            </div>
+
+            <div class="logos-row">
+                <img src="images/berkeley-logo.png" alt="Berkeley Group">
+                <img class="barratt-logo" src="images/barratt-logo.png" alt="Barratt Developments">
+                <img src="images/lq-logo.png" alt="L&Q">
+                <img src="images/network-rail-logo.png" alt="Network Rail">
+                <img src="images/nhs-logo.png" alt="NHS">
+               <img class="city-logo" src="images/city-of-london-logo.png" alt="City of London">
+            </div>
+
+        </div>
+
+        <div class="trust-testimonial">
+            <p>
+                “Professional, efficient and incredibly detailed reports.
+                A valuable partner for our projects.”
+            </p>
+
+            <div class="trust-bottom">
+                <span>Facilities Manager, Commercial Client</span>
+                <strong>★★★★★</strong>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="reports-feedback" id="reports"><div class="reports"><div class="mini" style="color:#d8e0e7">SAMPLE REPORTS</div><h2>See the Quality<br>for Yourself</h2><p>Explore example reports and aerial imagery from survey scenarios.</p><img class="report-img" src="images/sample-reports.png" alt="Sample drone survey reports"><a class="goldbtn" href="#contact">View Sample Reports →</a></div><div class="feedback"><div class="mini">CLIENT FEEDBACK</div><p class="testimonial">Clear imagery, detailed reporting and practical information to help property owners understand visible defects and the next steps.</p><div class="stars">★★★★★</div><p class="muted">Replace this example with a verified client testimonial before launch.</p></div></section>
+
+<section class="contact" id="contact"><div class="wrap contact-row"><div><div class="mini">CONTACT</div><h2>Need a clearer view?</h2><p class="muted">Tell us about the property and what you would like inspected.</p></div><a class="goldbtn" href="mailto:hello@dronesurveyslondon.co.uk">hello@dronesurveyslondon.co.uk →</a></div></section>
+</main>
+
+<footer><div class="wrap"><div class="footer-main"><div class="logo">DRONE SURVEYS<span>LONDON</span></div><div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#reports">Sample Reports</a><a href="#contact">Contact</a></div><div class="tag">HIGHER INSIGHTS<br>BRIGHTER POSSIBILITIES</div></div><div class="legal"><span>© 2026 Drone Surveys London. Drone Surveys London is a trading style of Spears Management Ltd.</span><span>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</span></div></div></footer>
+</body>
+</html>
