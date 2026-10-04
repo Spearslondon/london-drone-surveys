@@ -48,6 +48,11 @@ section{padding:20px 0}.mini{color:#65758b}.mini:before{content:"";width:28px;he
 .insights{padding:0;background:#f4f7f9}.insight-grid{display:grid;grid-template-columns:1fr 1.05fr;min-height:520px}.roof-image{position:relative;background:url("images/roof-defect-survey.png") center/cover no-repeat}.defect{position:absolute;right:30px;top:45px;background:#fff;width:190px;padding:8px;box-shadow:0 8px 30px #0003}.defect img{height:110px;width:100%;object-fit:cover}.defect small{display:block;padding:8px 3px 3px}.insight-copy{padding:70px 7vw 60px 55px}.checks{columns:2;list-style:none;padding:0;margin:25px 0}.checks li{break-inside:avoid;margin-bottom:15px;color:#586982}.checks li:before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;margin-right:9px}.goldbtn{display:inline-block;background:var(--gold);padding:15px 24px;font-weight:800}
 .process{padding:58px 0}.steps{display:grid;grid-template-columns:1.15fr repeat(4,1fr);gap:20px;align-items:center}.process h2{font-size:39px}.step{display:grid;grid-template-columns:48px 1fr;gap:12px}.number{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:22px}.step h3{font-size:14px;margin:4px 0}.step p{font-size:12px;color:var(--muted);line-height:1.4;margin:0}
 .reports-feedback{display:grid;grid-template-columns:1.15fr 1fr;padding:0}.reports{background:var(--navy);color:#fff;padding:60px max(4vw,30px)}.reports h2{font-size:42px}.report-img{width:100%;height:275px;object-fit:contain;margin:12px 0}.feedback{padding:60px max(5vw,30px);background:#fbfcfd}.testimonial{font-family:Georgia,serif;font-style:italic;font-size:22px;line-height:1.55}.stars{color:var(--gold);font-size:25px;letter-spacing:3px}
+.contact-intro{background:#fff;padding:58px 5% 42px;text-align:center}
+.contact-intro .mini{display:inline-block;margin-bottom:10px}
+.contact-intro h2{font-family:Georgia,"Times New Roman",serif;font-size:44px;line-height:1.08;font-weight:400;color:var(--navy);margin:0 0 16px}
+.contact-intro p{max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.65}
+@media(max-width:760px){.contact-intro{padding:46px 7% 34px}.contact-intro h2{font-size:36px}.contact-intro p{font-size:15px}}
 .contact{background:#fbfaf6;padding:0}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;max-width:1220px;margin:0 auto;min-height:470px}
 .contact-option{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 50px}
@@ -1209,6 +1214,12 @@ background:linear-gradient(
 </section>
 
 <section class="reports-feedback" id="reports"><div class="reports"><div class="mini" style="color:#d8e0e7">SAMPLE REPORTS</div><h2>See the Quality<br>for Yourself</h2><p>Explore example reports and aerial imagery from survey scenarios.</p><img class="report-img" src="images/sample-reports.png" alt="Sample drone survey reports"><a class="goldbtn" href="#contact">View Sample Reports →</a></div><div class="feedback"><div class="mini">CLIENT FEEDBACK</div><p class="testimonial">Clear imagery, detailed reporting and practical information to help property owners understand visible defects and the next steps.</p><div class="stars">★★★★★</div><p class="muted">Replace this example with a verified client testimonial before launch.</p></div></section>
+
+<section class="contact-intro" aria-labelledby="contact-intro-heading">
+  <div class="mini">GET IN TOUCH</div>
+  <h2 id="contact-intro-heading">Ready for a Clearer View?</h2>
+  <p>Whether you need a simple roof inspection, a detailed condition survey or advice on remedial works, get in touch and we’ll help you choose the right survey for your property.</p>
+</section>
 
 <section class="contact" id="contact" aria-label="Contact London Drone Surveys">
   <div class="contact-grid">
