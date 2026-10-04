@@ -753,6 +753,39 @@ background:linear-gradient(
         font-size:34px;
     }
 }
+
+/* PRICING */
+.pricing-section{background:#f6f7f8;padding:75px 4% 65px}
+.pricing-head{text-align:center;max-width:900px;margin:0 auto 42px}
+.pricing-head .mini:before{display:none}
+.pricing-head h2{color:var(--navy);margin:10px 0 12px}
+.pricing-head p{margin:0;color:var(--muted);font-size:16px}
+.pricing-grid{max-width:1400px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.price-card{background:#fff;border:1px solid #dfe5ea;position:relative;display:flex;flex-direction:column}
+.price-card.featured{border:2px solid var(--gold);transform:translateY(-8px)}
+.popular{position:absolute;top:-22px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;padding:11px 34px;font-size:12px;font-weight:800;letter-spacing:.08em;white-space:nowrap}
+.price-card img{width:100%;height:180px;object-fit:cover}
+.price-title{background:var(--navy);color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.price-title h3{margin:0;font-size:22px}
+.price{font-family:Georgia,"Times New Roman",serif;font-size:27px;font-weight:700;text-align:right}
+.price small{display:block;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.08em}
+.price.gold-price{color:var(--gold);font-family:Arial,Helvetica,sans-serif;font-size:16px}
+.price-body{padding:25px 26px 28px;flex:1}
+.price-body>p{color:var(--ink);font-size:15px;line-height:1.5;padding-bottom:18px;border-bottom:1px solid var(--line);margin:0 0 18px}
+.price-list{list-style:none;padding:0;margin:0}
+.price-list li{position:relative;padding:0 0 12px 30px;color:#33445a;font-size:14px;line-height:1.4}
+.price-list li:before{content:"✓";position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:#b58a3d;color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700}
+.pricing-benefits{max-width:1400px;margin:32px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.pricing-benefit{text-align:center;padding:0 20px;border-right:1px solid var(--line)}
+.pricing-benefit:last-child{border-right:0}
+.pricing-benefit strong{display:block;font-size:13px;color:var(--navy);margin-bottom:4px}
+.pricing-benefit span{font-size:12px;color:var(--muted)}
+.pricing-note{max-width:1400px;margin:25px auto 0;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}
+.pricing-note strong{display:block;color:var(--navy);font-size:13px;margin-bottom:12px}
+.pricing-cta{display:inline-block;margin-top:15px;background:var(--gold);color:var(--navy);padding:15px 26px;font-weight:800;font-size:13px}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr}.price-card.featured{transform:none;margin-top:18px}.pricing-benefits{grid-template-columns:1fr 1fr;gap:20px}.pricing-benefit{border-right:0}.price-card img{height:220px}}
+@media(max-width:560px){.pricing-benefits{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -970,6 +1003,51 @@ background:linear-gradient(
 </div>
 
 <div class="steps"><div class="step"><div class="number">1</div><div><h3>Get in Touch</h3><p>Tell us your requirements.</p></div></div><div class="step"><div class="number">2</div><div><h3>We Plan</h3><p>We assess and plan the survey.</p></div></div><div class="step"><div class="number">3</div><div><h3>We Fly</h3><p>We carry out the aerial inspection.</p></div></div><div class="step"><div class="number">4</div><div><h3>You Receive Results</h3><p>Clear imagery and reporting.</p></div></div></div></section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-head">
+    <div class="mini">DRONE SURVEY PACKAGES</div>
+    <h2>Clear Pricing. Professional Reports.</h2>
+    <p>From simple roof checks to full surveys with expert advice and remedial solutions.</p>
+  </div>
+  <div class="pricing-grid">
+    <article class="price-card">
+      <img src="images/roof-surveys.png" alt="Basic drone roof survey in London">
+      <div class="price-title"><h3>BASIC</h3><div class="price"><small>FROM</small>£195</div></div>
+      <div class="price-body"><p>Ideal for a straightforward roof or property inspection.</p>
+        <ul class="price-list"><li>High-resolution aerial photography</li><li>Visual inspection of requested areas</li><li>Key defect imagery</li><li>Digital image delivery</li></ul>
+      </div>
+    </article>
+    <article class="price-card featured">
+      <div class="popular">MOST POPULAR</div>
+      <img src="images/building-surveys.png" alt="Standard drone building survey in London">
+      <div class="price-title"><h3>STANDARD</h3><div class="price"><small>FROM</small>£295</div></div>
+      <div class="price-body"><p>A more complete condition survey.</p>
+        <ul class="price-list"><li>Everything in Basic</li><li>Detailed inspection of key areas</li><li>Annotated defect imagery</li><li>Written findings and condition observations</li><li>Professional PDF survey report</li></ul>
+      </div>
+    </article>
+    <article class="price-card">
+      <img src="images/defect-closeup.png" alt="Drone survey identifying roof defects and remedial works">
+      <div class="price-title"><h3>SURVEY &amp; REMEDY</h3><div class="price gold-price">SURVEY<br>INCLUDED*</div></div>
+      <div class="price-body"><p>Identify the problem and get a route to repair.</p>
+        <ul class="price-list"><li>Full drone inspection</li><li>Detailed report with expert observations</li><li>Practical remedial recommendations</li><li>Quotation for identified works</li><li>Survey cost credited back if remedial works are instructed through us</li></ul>
+      </div>
+    </article>
+  </div>
+  <div class="pricing-benefits">
+    <div class="pricing-benefit"><strong>SAFE &amp; COMPLIANT</strong><span>CAA registered operations</span></div>
+    <div class="pricing-benefit"><strong>HIGH-RESOLUTION IMAGERY</strong><span>Crystal clear detail</span></div>
+    <div class="pricing-benefit"><strong>PROFESSIONAL REPORTS</strong><span>Clear findings and recommendations</span></div>
+    <div class="pricing-benefit"><strong>CONSTRUCTION EXPERTISE</strong><span>Real solutions, not just pictures</span></div>
+  </div>
+  <div class="pricing-note">
+    <strong>Commercial, block management, façade, heritage and larger-property surveys are individually quoted.</strong>
+    Pricing may vary depending on property size, location, airspace restrictions, access requirements and the complexity of the inspection.<br>
+    <a class="pricing-cta" href="#contact">GET A SURVEY QUOTE →</a>
+  </div>
+</section>
+
 <!-- SMARTER INSIGHTS -->
 <section class="insights">
 
