@@ -48,7 +48,18 @@ section{padding:20px 0}.mini{color:#65758b}.mini:before{content:"";width:28px;he
 .insights{padding:0;background:#f4f7f9}.insight-grid{display:grid;grid-template-columns:1fr 1.05fr;min-height:520px}.roof-image{position:relative;background:url("images/roof-defect-survey.png") center/cover no-repeat}.defect{position:absolute;right:30px;top:45px;background:#fff;width:190px;padding:8px;box-shadow:0 8px 30px #0003}.defect img{height:110px;width:100%;object-fit:cover}.defect small{display:block;padding:8px 3px 3px}.insight-copy{padding:70px 7vw 60px 55px}.checks{columns:2;list-style:none;padding:0;margin:25px 0}.checks li{break-inside:avoid;margin-bottom:15px;color:#586982}.checks li:before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;margin-right:9px}.goldbtn{display:inline-block;background:var(--gold);padding:15px 24px;font-weight:800}
 .process{padding:58px 0}.steps{display:grid;grid-template-columns:1.15fr repeat(4,1fr);gap:20px;align-items:center}.process h2{font-size:39px}.step{display:grid;grid-template-columns:48px 1fr;gap:12px}.number{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:22px}.step h3{font-size:14px;margin:4px 0}.step p{font-size:12px;color:var(--muted);line-height:1.4;margin:0}
 .reports-feedback{display:grid;grid-template-columns:1.15fr 1fr;padding:0}.reports{background:var(--navy);color:#fff;padding:60px max(4vw,30px)}.reports h2{font-size:42px}.report-img{width:100%;height:275px;object-fit:contain;margin:12px 0}.feedback{padding:60px max(5vw,30px);background:#fbfcfd}.testimonial{font-family:Georgia,serif;font-style:italic;font-size:22px;line-height:1.55}.stars{color:var(--gold);font-size:25px;letter-spacing:3px}
-.contact{background:#fff}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact{background:#fbfaf6;padding:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;max-width:1220px;margin:0 auto;min-height:470px}
+.contact-option{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 50px}
+.contact-option:first-child{border-right:1px solid #ded8cb}
+.contact-icon{width:80px;height:80px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin-bottom:22px;color:var(--gold)}
+.contact-icon svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.contact-option h2{font-family:Georgia,"Times New Roman",serif;font-size:42px;line-height:1.05;font-weight:400;color:var(--navy);margin:0 0 14px}
+.contact-option p{font-size:17px;line-height:1.55;color:#48566a;margin:0 0 30px;max-width:430px}
+.contact-cta{display:inline-block;min-width:160px;border:1px solid var(--gold);padding:16px 26px;color:var(--navy);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:#fff;transition:.2s ease}
+.contact-cta:hover{background:var(--gold);color:var(--navy)}
+.contact-detail{margin-top:14px;font-size:13px;color:#7a8491}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}.contact-option{padding:55px 7%}.contact-option:first-child{border-right:0;border-bottom:1px solid #ded8cb}.contact-option h2{font-size:36px}}
 footer{background:#061c2e;color:#fff;padding:42px 0 26px}.footer-main{display:grid;grid-template-columns:1.2fr 2fr .8fr;gap:35px;align-items:center}.footer-links{display:flex;justify-content:center;gap:20px;font-size:12px}.tag{text-align:right;font-size:11px;letter-spacing:.18em}.legal{border-top:1px solid #ffffff24;margin-top:30px;padding-top:20px;color:#aab6c0;font-size:11px;display:flex;justify-content:space-between;gap:20px}
 /* TRUSTED ACROSS MULTIPLE SECTORS */
 
@@ -1199,7 +1210,34 @@ background:linear-gradient(
 
 <section class="reports-feedback" id="reports"><div class="reports"><div class="mini" style="color:#d8e0e7">SAMPLE REPORTS</div><h2>See the Quality<br>for Yourself</h2><p>Explore example reports and aerial imagery from survey scenarios.</p><img class="report-img" src="images/sample-reports.png" alt="Sample drone survey reports"><a class="goldbtn" href="#contact">View Sample Reports →</a></div><div class="feedback"><div class="mini">CLIENT FEEDBACK</div><p class="testimonial">Clear imagery, detailed reporting and practical information to help property owners understand visible defects and the next steps.</p><div class="stars">★★★★★</div><p class="muted">Replace this example with a verified client testimonial before launch.</p></div></section>
 
-<section class="contact" id="contact"><div class="wrap contact-row"><div><div class="mini">CONTACT</div><h2>Need a clearer view?</h2><p class="muted">Tell us about the property and what you would like inspected.</p></div><a class="goldbtn" href="mailto:hello@dronesurveyslondon.co.uk">hello@dronesurveyslondon.co.uk →</a></div></section>
+<section class="contact" id="contact" aria-label="Contact London Drone Surveys">
+  <div class="contact-grid">
+    <div class="contact-option">
+      <div class="contact-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 4h3l2 5-2 1.5a15 15 0 0 0 5.5 5.5L15 14l5 2v3a2 2 0 0 1-2 2C9.7 21 3 14.3 3 6a2 2 0 0 1 2-2z"/>
+        </svg>
+      </div>
+      <h2>Call Us</h2>
+      <p>Get in touch and let's discuss your property, survey requirements and the areas you need inspected.</p>
+      <a class="contact-cta" href="tel:+442039165829" aria-label="Call London Drone Surveys on +44 20 3916 5829">Call Us</a>
+      <div class="contact-detail">+44 20 3916 5829</div>
+    </div>
+
+    <div class="contact-option">
+      <div class="contact-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="1"/>
+          <path d="M4 7l8 6 8-6"/>
+        </svg>
+      </div>
+      <h2>Email Us</h2>
+      <p>Tell us about your property and what you would like surveyed, and we'll help you plan the next step.</p>
+      <a class="contact-cta" href="mailto:info@spearsltd.co.uk?subject=London%20Drone%20Survey%20Enquiry" aria-label="Email London Drone Surveys">Email Us</a>
+      <div class="contact-detail">info@spearsltd.co.uk</div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer><div class="wrap"><div class="footer-main"><div class="logo">DRONE SURVEYS<span>LONDON</span></div><div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#reports">Sample Reports</a><a href="#contact">Contact</a></div><div class="tag">HIGHER INSIGHTS<br>BRIGHTER POSSIBILITIES</div></div><div class="legal"><span>© 2026 Drone Surveys London. Drone Surveys London is a trading style of Spears Management Ltd.</span><span>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</span></div></div></footer>
