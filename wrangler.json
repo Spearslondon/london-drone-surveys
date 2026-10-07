@@ -1,8 +1,19 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "london-drone-survey",
-  "compatibility_date": "2026-10-04",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-07",
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "info@spearsltd.co.uk"
+    }
+  ]
 }
