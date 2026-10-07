@@ -980,7 +980,7 @@ background:linear-gradient(
 .survey-upload-copy small{display:block;color:#788495;line-height:1.4;margin-bottom:9px}
 .survey-upload input[type=file]{max-width:100%;font-size:12px;color:#586779}
 .survey-submit{grid-column:1/-1;border:0;border-radius:7px;background:linear-gradient(90deg,#071f32,#102f48);color:#fff;min-height:58px;padding:0 24px;font-size:16px;font-weight:700;cursor:pointer}
-.survey-privacy{grid-column:1/-1;margin:-6px 0 0;color:#788495;font-size:11px;line-height:1.5}
+.survey-privacy{grid-column:1/-1;margin:-6px 0 0;color:#788495;font-size:11px;line-height:1.5}.survey-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}.survey-status{grid-column:1/-1;min-height:20px;font-size:13px;line-height:1.45}.survey-status.success{color:#1f6b43}.survey-status.error{color:#a52a2a}.survey-submit[disabled]{opacity:.65;cursor:wait}
 .survey-side-image{width:100%;height:430px;object-fit:cover;border-radius:10px}
 .survey-benefits{display:grid;grid-template-columns:1fr 1fr;gap:28px 36px;margin-top:28px}
 .survey-benefit{display:grid;grid-template-columns:56px 1fr;gap:15px;align-items:start}
@@ -1389,7 +1389,7 @@ background:linear-gradient(
       <h2>Request a Survey</h2>
       <p>Tell us a bit about your property and what you need inspecting, and we’ll get back to you with a straightforward plan and quote.</p>
 
-      <form class="survey-form" onsubmit="event.preventDefault();" aria-label="Request a drone survey">
+      <form class="survey-form" id="survey-request-form" action="/api/request-survey" method="post" enctype="multipart/form-data" aria-label="Request a drone survey">
         <div class="survey-field">
           <label for="survey-name">Full name <span>*</span></label>
           <input id="survey-name" name="name" type="text" placeholder="Your name" required>
@@ -1427,11 +1427,13 @@ background:linear-gradient(
           <div class="survey-upload-icon" aria-hidden="true">⇧</div>
           <div class="survey-upload-copy">
             <strong>Add photos or plans (optional)</strong>
-            <small>You can attach images or a PDF to help us understand the property.</small>
+            <small>You can attach up to 5 JPG, PNG or PDF files (3 MB total).</small>
             <input type="file" name="attachments" accept=".jpg,.jpeg,.png,.pdf" multiple>
           </div>
         </div>
+        <input class="survey-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button class="survey-submit" type="submit">Request a Survey →</button>
+        <div class="survey-status" id="survey-status" role="status" aria-live="polite"></div>
         <p class="survey-privacy">By submitting this form you agree to our privacy policy. We’ll only use your details to respond to your enquiry.</p>
       </form>
     </div>
@@ -1608,5 +1610,60 @@ background:linear-gradient(
     </div>
   </div>
 </footer>
+
+<script>
+(() => {
+  const surveyForm = document.getElementById('survey-request-form');
+  const surveyStatus = document.getElementById('survey-status');
+  if (!surveyForm || !surveyStatus) return;
+
+  surveyForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const button = surveyForm.querySelector('.survey-submit');
+    const files = surveyForm.querySelector('input[type="file"]')?.files || [];
+    const totalBytes = Array.from(files).reduce((sum, file) => sum + file.size, 0);
+
+    if (files.length > 5) {
+      surveyStatus.className = 'survey-status error';
+      surveyStatus.textContent = 'Please attach no more than 5 files.';
+      return;
+    }
+    if (totalBytes > 3 * 1024 * 1024) {
+      surveyStatus.className = 'survey-status error';
+      surveyStatus.textContent = 'Please keep attachments below 3 MB in total.';
+      return;
+    }
+
+    surveyStatus.className = 'survey-status';
+    surveyStatus.textContent = 'Sending your request…';
+    button.disabled = true;
+    button.textContent = 'Sending…';
+
+    try {
+      const response = await fetch('/api/request-survey', {
+        method: 'POST',
+        body: new FormData(surveyForm)
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || 'We could not send your enquiry.');
+      }
+
+      surveyStatus.className = 'survey-status success';
+      surveyStatus.textContent = result.message || 'Thank you. Your survey request has been sent.';
+      surveyForm.reset();
+    } catch (error) {
+      surveyStatus.className = 'survey-status error';
+      surveyStatus.textContent = error.message || 'We could not send your enquiry. Please try again.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Request a Survey →';
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
