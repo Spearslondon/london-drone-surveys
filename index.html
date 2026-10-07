@@ -10,7 +10,7 @@
 :root{--navy:#071f32;--navy2:#0b2c46;--gold:#f4ad25;--ink:#10213b;--muted:#66748b;--line:#dfe5ea;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.wrap{width:min(1220px,92%);margin:auto}
 header{position:absolute;z-index:20;left:0;right:0;top:0;color:#fff;padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{font-weight:750;letter-spacing:.18em;line-height:1;font-size:28px;position:relative;top:40px;left:-150px;}.logo span{display:block;color:var(--gold);font-size:32px;letter-spacing:.38em;margin-top:7px}.brand-lockup{display:flex;align-items:center;gap:18px;margin-left:-132px}.brand-motif{width:92px;height:68px;object-fit:contain;flex:0 0 auto}.brand-divider{width:1px;height:76px;background:rgba(255,255,255,.78);flex:0 0 auto;margin:0 2px}.brand-lockup .logo{top:0;left:0;width:auto;font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:400;letter-spacing:.205em;line-height:.9;white-space:nowrap;text-align:left}.brand-lockup .logo span{display:block;width:auto;font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;letter-spacing:.13em;word-spacing:.18em;margin-top:12px;color:var(--gold);white-space:nowrap;text-align:left}.links{display:flex;align-items:center;gap:28px;font-size:20px;font-weight:400;}.quote-btn{background:var(--gold);color:#071f32;padding:14px 22px;font-weight:800}
-.hero{min-height:760px;position:98%;display:flex;align-items:center;color:#fff;background-image:linear-gradient(90deg,rgba(4,20,33,.84),rgba(4,20,33,.45) 43%,rgba(4,20,33,.05) 74%),url("images/hero-london.webp");background-size:cover;background-position:center;background-repeat:no-repeat}.hero .wrap{width:98%;max-width:1500px}.hero-content{padding-top:10px}.eyebrow,.mini{font-size:17px;font-weight:600;letter-spacing:.2em}.hero h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}.hero h1{font-size:clamp(54px,5vw,62px);line-height:.98;margin:14px 0 20px;max-width:790px}.gold{color:var(--gold)}.hero p{font-size:18px;line-height:1.55;max-width:590px}.outline{display:inline-block;border:1px solid #fff;padding:15px 23px;margin-top:10px;font-weight:700}.hero-side{position:absolute;right:5%;bottom:110px;font-size:12px;letter-spacing:.12em;line-height:1.7;font-weight:800}
+.hero{min-height:760px;position:98%;display:flex;align-items:center;color:#fff;background-image:linear-gradient(90deg,rgba(4,20,33,.84),rgba(4,20,33,.45) 43%,rgba(4,20,33,.05) 74%),url("images/hero-london.webp");background-size:cover;background-position:center;background-repeat:no-repeat}.hero{overflow:hidden}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,20,33,.84),rgba(4,20,33,.45) 43%,rgba(4,20,33,.05) 74%);pointer-events:none}.hero .wrap{position:relative;z-index:2}.hero-side{z-index:2}.hero .wrap{width:98%;max-width:1500px}.hero-content{padding-top:10px}.eyebrow,.mini{font-size:17px;font-weight:600;letter-spacing:.2em}.hero h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}.hero h1{font-size:clamp(54px,5vw,62px);line-height:.98;margin:14px 0 20px;max-width:790px}.gold{color:var(--gold)}.hero p{font-size:18px;line-height:1.55;max-width:590px}.outline{display:inline-block;border:1px solid #fff;padding:15px 23px;margin-top:10px;font-weight:700}.hero-side{position:absolute;right:5%;bottom:110px;font-size:12px;letter-spacing:.12em;line-height:1.7;font-weight:800}
 
 section{padding:20px 0}.mini{color:#65758b}.mini:before{content:"";width:28px;height:3px;background:var(--gold);display:inline-block;vertical-align:middle;margin-right:13px}.heading-row{display:flex;justify-content:space-between;gap:30px;align-items:end}h2{font-size:46px;line-height:1.05;margin:12px 0}.muted{color:var(--muted);line-height:1.55}
 #services .wrap{
@@ -844,7 +844,7 @@ background:linear-gradient(
 @media(max-width:620px){.pricing-section{padding:38px 4% 24px}.pricing-section:before,.pricing-section:after{height:460px}.pricing-head{padding-right:0;margin-bottom:56px}.pricing-head .mini{font-size:11px}.pricing-head .mini:before{width:32px;margin-right:8px}.pricing-head h2{font-size:35px}.pricing-head p{font-size:14px}.price-card img{height:180px}.price-title{min-height:64px;padding:12px 18px}.price-title h3{font-size:24px}.price{font-size:24px}.price.gold-price{font-size:13px}.price-body{padding:20px 22px 24px}.pricing-benefits{grid-template-columns:1fr}.pricing-benefit{border-right:0;border-bottom:1px solid #ddd8ce}.pricing-benefit:last-child{border-bottom:0}.pricing-note{padding-bottom:72px}.pricing-cta{width:min(285px,100%)}}
 
 /* MOBILE REFINEMENT - OCT 2026 */
-@media(max-width:760px){
+@media(max-width:760px){.hero-video{display:none}.hero:after{display:none}
   html,body{width:100%;max-width:100%;overflow-x:hidden}
   body{font-size:16px}
   .wrap{width:100%;max-width:none;padding-left:20px;padding-right:20px}
@@ -956,6 +956,8 @@ background:linear-gradient(
   .footer-brand-lockup{margin-left:0}
 }
 
+
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}}
 </style>
 </head>
 <body>
@@ -972,7 +974,11 @@ background:linear-gradient(
     </nav></div></header>
 
 <main>
-<section class="hero" id="home"><div class="wrap hero-content"><div class="eyebrow">PROFESSIONAL DRONE SURVEYS IN LONDON & SURROUNDING AREAS</div><h1>A Higher<br>Perspective<br><span class="gold">for a Safer Tomorrow</span></h1><p>Accurate data. Clear insights. Safer buildings.<br>We help you inspect, assess and maintain your property or site using professional drone technology.</p></div><div class="hero-side">INSPECT<br>ASSESS<br>PLAN<br>MAINTAIN</div>
+<section class="hero" id="home">
+<video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero-london.webp" aria-hidden="true">
+  <source src="images/london-drone-surveys-desktop-hero-22s.mp4" type="video/mp4">
+</video>
+<div class="wrap hero-content"><div class="eyebrow">PROFESSIONAL DRONE SURVEYS IN LONDON & SURROUNDING AREAS</div><h1>A Higher<br>Perspective<br><span class="gold">for a Safer Tomorrow</span></h1><p>Accurate data. Clear insights. Safer buildings.<br>We help you inspect, assess and maintain your property or site using professional drone technology.</p></div><div class="hero-side">INSPECT<br>ASSESS<br>PLAN<br>MAINTAIN</div>
 </section>
   </div>
   <!-- TRUSTED ACROSS MULTIPLE SECTORS -->
