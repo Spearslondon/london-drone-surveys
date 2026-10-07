@@ -980,7 +980,7 @@ background:linear-gradient(
 .survey-upload-copy small{display:block;color:#788495;line-height:1.4;margin-bottom:9px}
 .survey-upload input[type=file]{max-width:100%;font-size:12px;color:#586779}
 .survey-submit{grid-column:1/-1;border:0;border-radius:7px;background:linear-gradient(90deg,#071f32,#102f48);color:#fff;min-height:58px;padding:0 24px;font-size:16px;font-weight:700;cursor:pointer}
-.survey-privacy{grid-column:1/-1;margin:-6px 0 0;color:#788495;font-size:11px;line-height:1.5}.survey-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}.survey-status{grid-column:1/-1;min-height:20px;font-size:13px;line-height:1.45}.survey-status.success{color:#1f6b43}.survey-status.error{color:#a52a2a}.survey-submit[disabled]{opacity:.65;cursor:wait}
+.survey-privacy{grid-column:1/-1;margin:-6px 0 0;color:#788495;font-size:11px;line-height:1.5}.survey-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}.survey-status{grid-column:1/-1;min-height:20px;font-size:13px;line-height:1.45}.survey-status.success{color:#1f6b43}.survey-status.error{color:#a52a2a}.survey-submit[disabled]{opacity:.65;cursor:wait}.survey-success-panel{display:none;grid-column:1/-1;background:#f4f8f5;border:1px solid #cfe0d4;border-radius:10px;padding:28px 24px;text-align:center}.survey-success-panel.show{display:block}.survey-success-icon{width:54px;height:54px;border-radius:50%;margin:0 auto 14px;background:#e2efe6;color:#1f6b43;display:grid;place-items:center;font-size:28px;font-weight:700}.survey-success-panel h3{margin:0 0 8px;color:var(--navy);font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:400}.survey-success-panel p{margin:0 auto;color:#5f6f7d;max-width:560px;font-size:14px;line-height:1.6}
 .survey-side-image{width:100%;height:430px;object-fit:cover;border-radius:10px}
 .survey-benefits{display:grid;grid-template-columns:1fr 1fr;gap:28px 36px;margin-top:28px}
 .survey-benefit{display:grid;grid-template-columns:56px 1fr;gap:15px;align-items:start}
@@ -1434,6 +1434,11 @@ background:linear-gradient(
         <input class="survey-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button class="survey-submit" type="submit">Request a Survey →</button>
         <div class="survey-status" id="survey-status" role="status" aria-live="polite"></div>
+        <div class="survey-success-panel" id="survey-success-panel" aria-live="polite">
+          <div class="survey-success-icon">✓</div>
+          <h3>Thank you — we’ve received your request.</h3>
+          <p>We’ll review your survey details and get back to you promptly with the next steps, usually within one working day.</p>
+        </div>
         <p class="survey-privacy">By submitting this form you agree to our privacy policy. We’ll only use your details to respond to your enquiry.</p>
       </form>
     </div>
@@ -1615,7 +1620,8 @@ background:linear-gradient(
 (() => {
   const surveyForm = document.getElementById('survey-request-form');
   const surveyStatus = document.getElementById('survey-status');
-  if (!surveyForm || !surveyStatus) return;
+  const surveySuccess = document.getElementById('survey-success-panel');
+  if (!surveyForm || !surveyStatus || !surveySuccess) return;
 
   surveyForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -1651,9 +1657,13 @@ background:linear-gradient(
         throw new Error(result.message || 'We could not send your enquiry.');
       }
 
-      surveyStatus.className = 'survey-status success';
-      surveyStatus.textContent = result.message || 'Thank you. Your survey request has been sent.';
+      surveyStatus.className = 'survey-status';
+      surveyStatus.textContent = '';
       surveyForm.reset();
+      Array.from(surveyForm.children).forEach((el) => {
+        if (el !== surveySuccess) el.style.display = 'none';
+      });
+      surveySuccess.classList.add('show');
     } catch (error) {
       surveyStatus.className = 'survey-status error';
       surveyStatus.textContent = error.message || 'We could not send your enquiry. Please try again.';
