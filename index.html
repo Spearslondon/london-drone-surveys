@@ -1002,6 +1002,31 @@ background:linear-gradient(
 }
 
 </style>
+
+<style>
+.reports-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:28px}
+.reports-modal.is-open{display:flex}
+.reports-modal-backdrop{position:absolute;inset:0;background:rgba(3,17,29,.82);backdrop-filter:blur(4px)}
+.reports-modal-panel{position:relative;z-index:1;width:min(1180px,96vw);max-height:90vh;overflow:auto;background:#fff;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.3);padding:44px}
+.reports-modal-close{position:absolute;top:18px;right:20px;width:42px;height:42px;border:1px solid #dfe5ea;border-radius:50%;background:#fff;color:#071f32;font-size:29px;line-height:1;cursor:pointer}
+.reports-modal-head{text-align:center;max-width:760px;margin:0 auto 30px}
+.reports-modal-head .mini{display:inline-block;margin-bottom:10px}
+.reports-modal-head h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:#071f32;font-size:44px;line-height:1.05;margin:0 0 14px}
+.reports-modal-head p{color:#66748b;font-size:16px;line-height:1.6;margin:0}
+.reports-modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.report-card{border:1px solid #dfe5ea;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(7,31,50,.07)}
+.report-card img{display:block;width:100%;height:210px;object-fit:cover}
+.report-card-body{padding:22px}
+.report-card-body>span{font-size:10px;letter-spacing:.18em;font-weight:800;color:#f4ad25}
+.report-card h3{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400;color:#071f32;margin:8px 0 10px}
+.report-card p{font-size:14px;line-height:1.6;color:#66748b;margin:0 0 20px}
+.report-pdf-btn{width:100%;border:1px solid #d7dde2;background:#f4f6f7;color:#7a8793;padding:13px 16px;font-weight:700;cursor:not-allowed}
+.reports-modal-note{text-align:center;color:#788495;font-size:12px;line-height:1.5;margin-top:22px}
+body.reports-modal-open{overflow:hidden}
+@media(max-width:900px){.reports-modal-grid{grid-template-columns:1fr 1fr}.reports-modal-panel{padding:38px 26px}.reports-modal-head h2{font-size:36px}}
+@media(max-width:620px){.reports-modal{padding:14px}.reports-modal-panel{padding:36px 18px 24px;max-height:92vh}.reports-modal-grid{grid-template-columns:1fr}.report-card img{height:180px}.reports-modal-head h2{font-size:32px}.reports-modal-head p{font-size:14px}.reports-modal-close{top:10px;right:10px}}
+</style>
+
 </head>
 <body>
 <header><div class="wrap nav"><div class="brand-lockup" aria-label="London Drone Surveys">
@@ -1491,7 +1516,7 @@ background:linear-gradient(
     </div>
 </section>
 
-<section class="reports-feedback" id="reports"><div class="reports"><div class="mini" style="color:#d8e0e7">SAMPLE REPORTS</div><h2>See the Quality<br>for Yourself</h2><p>Explore example reports and aerial imagery from survey scenarios.</p><img class="report-img" src="images/sample-reports.webp" alt="Sample drone survey reports" loading="lazy" decoding="async"><a class="goldbtn" href="#contact">View Sample Reports →</a></div><div class="feedback"><div class="mini">CLIENT FEEDBACK</div><p class="testimonial">Clear imagery, detailed reporting and practical information to help property owners understand visible defects and the next steps.</p><div class="stars">★★★★★</div>
+<section class="reports-feedback" id="reports"><div class="reports"><div class="mini" style="color:#d8e0e7">SAMPLE REPORTS</div><h2>See the Quality<br>for Yourself</h2><p>Explore example reports and aerial imagery from survey scenarios.</p><img class="report-img" src="images/sample-reports.webp" alt="Sample drone survey reports" loading="lazy" decoding="async"><a class="goldbtn" href="#" id="open-sample-reports" aria-haspopup="dialog" aria-controls="sample-reports-modal">View Sample Reports →</a></div><div class="feedback"><div class="mini">CLIENT FEEDBACK</div><p class="testimonial">Clear imagery, detailed reporting and practical information to help property owners understand visible defects and the next steps.</p><div class="stars">★★★★★</div>
 <div class="feedback-credentials">
   <div class="feedback-credential">
     <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg>
@@ -1509,6 +1534,50 @@ background:linear-gradient(
     <span>Practical guidance on defects and appropriate next steps.</span>
   </div>
 </div></div></section>
+
+
+<div class="reports-modal" id="sample-reports-modal" aria-hidden="true">
+  <div class="reports-modal-backdrop" data-close-reports-modal></div>
+  <div class="reports-modal-panel" role="dialog" aria-modal="true" aria-labelledby="reports-modal-title">
+    <button class="reports-modal-close" type="button" aria-label="Close sample reports" data-close-reports-modal>×</button>
+    <div class="reports-modal-head">
+      <div class="mini">SAMPLE REPORTS</div>
+      <h2 id="reports-modal-title">Explore Our Survey Reports</h2>
+      <p>Choose a report type to see the level of imagery, observations and practical detail included in our surveys.</p>
+    </div>
+    <div class="reports-modal-grid">
+      <article class="report-card">
+        <img src="images/roof-surveys.webp" alt="Roof condition survey aerial inspection" loading="lazy" decoding="async">
+        <div class="report-card-body">
+          <span>RESIDENTIAL</span>
+          <h3>Roof Condition Survey</h3>
+          <p>A clear visual review of roof coverings, flashings, gutters, chimneys and other visible defects.</p>
+          <button class="report-pdf-btn" type="button" disabled>PDF coming soon</button>
+        </div>
+      </article>
+      <article class="report-card">
+        <img src="images/building-surveys.webp" alt="Building and facade drone survey" loading="lazy" decoding="async">
+        <div class="report-card-body">
+          <span>BUILDING CONDITION</span>
+          <h3>Building &amp; Façade Survey</h3>
+          <p>High-resolution imagery with structured observations across elevations and difficult-to-access areas.</p>
+          <button class="report-pdf-btn" type="button" disabled>PDF coming soon</button>
+        </div>
+      </article>
+      <article class="report-card">
+        <img src="images/construction-monitoring.webp" alt="Construction progress drone monitoring" loading="lazy" decoding="async">
+        <div class="report-card-body">
+          <span>COMMERCIAL</span>
+          <h3>Construction Progress Survey</h3>
+          <p>Aerial progress imagery and concise reporting to help record site condition, progress and key observations.</p>
+          <button class="report-pdf-btn" type="button" disabled>PDF coming soon</button>
+        </div>
+      </article>
+    </div>
+    <div class="reports-modal-note">Sample PDFs can be opened directly from these cards once the final report files are uploaded.</div>
+  </div>
+</div>
+
 
 <section class="contact-intro" aria-labelledby="contact-intro-heading">
   <div class="mini">GET IN TOUCH</div>
@@ -1671,6 +1740,39 @@ background:linear-gradient(
       button.disabled = false;
       button.textContent = 'Request a Survey →';
     }
+  });
+})();
+</script>
+
+
+<script>
+(() => {
+  const opener = document.getElementById('open-sample-reports');
+  const modal = document.getElementById('sample-reports-modal');
+  if (!opener || !modal) return;
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('reports-modal-open');
+    opener.focus();
+  };
+
+  const openModal = (event) => {
+    event.preventDefault();
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('reports-modal-open');
+    const closeButton = modal.querySelector('.reports-modal-close');
+    if (closeButton) closeButton.focus();
+  };
+
+  opener.addEventListener('click', openModal);
+  modal.querySelectorAll('[data-close-reports-modal]').forEach((el) => {
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 })();
 </script>
